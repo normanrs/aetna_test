@@ -1,6 +1,5 @@
 Given("Visitor is on Home Page") do 
-  require 'pry'; binding.pry
-  expect(current_path).to eq('https://www.aetna.com/individuals-families.html')
+  expect(URI.parse(current_url).to_s).to eq('https://www.aetna.com/')
 end
 
 When("Visitor scrolls to the bottom of the page") do 
